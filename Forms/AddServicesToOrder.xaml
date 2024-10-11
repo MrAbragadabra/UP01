@@ -1,0 +1,30 @@
+﻿<Window x:Name="addServicesToOrder" x:Class="MewingLab.Forms.AddServicesToOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MewingLab.Forms"
+        mc:Ignorable="d"
+        Title="Добавление услуг к заказу" Height="300" Width="400" FontFamily="Comic Sans MS" FontSize="20" Icon="/Resources/Images/logo.ico" Loaded="addServicesToOrder_Loaded">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="10, 10, 10, 10">
+                <TextBlock Text="Добавление услуг к заказу" HorizontalAlignment="Center"/>
+
+                <Label Content="Услуги:"/>
+                <ComboBox x:Name="servicesCMB" SelectionChanged="servicesCMB_SelectionChanged"/>
+
+                <Label Margin="0, 10, 0, 0" Content="Выбранные услуги:"/>
+                <ComboBox x:Name="selectedServicesCMB" SelectionChanged="selectedServicesCMB_SelectionChanged"/>
+
+                <Button x:Name="addServicesToOrderButton" Margin="0, 10, 0, 0" Content="Добавить услуги" Height="45" Foreground="White" Background="#FF498C51" Click="addServicesToOrderButton_Click"/>
+
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>

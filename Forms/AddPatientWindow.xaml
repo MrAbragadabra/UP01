@@ -1,0 +1,44 @@
+﻿<Window x:Name="addPatientWindow" x:Class="MewingLab.Forms.AddPatientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MewingLab.Forms"
+        mc:Ignorable="d"
+        Title="AddPatientWindow" Height="700" Width="400" Icon="/Resources/Images/logo.ico" FontFamily="Comic Sans MS" FontSize="20">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="10, 10, 10, 10" Grid.Column="0">
+            <TextBlock Text="Добавление пациента" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="ФИО"/>
+            <TextBox x:Name="patientNameTB"/>
+
+            <TextBlock Margin="0, 10, 0, 0" Text="Дата рождения"/>
+            <DatePicker x:Name="patientBornDP"/>
+
+            <TextBlock Margin="0, 10, 0, 0" Text="Серия паспорта"/>
+            <TextBox x:Name="patientSeriesPassportTB" MaxLength="4" PreviewKeyDown="patientSeriesPassportTB_PreviewKeyDown"/>
+
+            <TextBlock Margin="0, 10, 0, 0" Text="Номер паспорта"/>
+            <TextBox x:Name="patientNumberPassportTB" MaxLength="6" PreviewKeyDown="patientNumberPassportTB_PreviewKeyDown"/>
+
+            <TextBlock Margin="0, 10, 0, 0" Text="Электронная почта"/>
+            <TextBox x:Name="patientEmailTB" MaxLength="255" PreviewKeyDown="patientEmailTB_PreviewKeyDown"/>
+
+            <TextBlock Margin="0, 10, 0, 0" Text="Номер полиса"/>
+            <TextBox x:Name="patientInsuranceNumbertTB" MaxLength="16" PreviewKeyDown="patientInsuranceNumbertTB_PreviewKeyDown"/>
+
+            <TextBlock Margin="0, 10, 0, 0" Text="Тип страхового полиса"/>
+            <ComboBox x:Name="insuranceTypeCMB"/>
+
+            <TextBlock Margin="0, 10, 0, 0" Text="Страховая компания"/>
+            <ComboBox x:Name="insuranceCompanyCMB"/>
+
+            <Button x:Name="addPatientButton" Margin="0, 10, 0, 0" Content="Добавить пациента" FontSize="20" FontWeight="Bold" Background="#FF498C51" Foreground="White" Height="45" Click="addPatientButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

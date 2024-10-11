@@ -1,0 +1,69 @@
+﻿<Window x:Name="loginWindow" x:Class="MewingLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MewingLab"
+        mc:Ignorable="d"
+        Title="Вход в MewingLab" Height="330" Width="450" Icon="/Resources/Images/logo.ico" FontFamily="Comic Sans MS" FontSize="14" ResizeMode="NoResize" Closing="loginWindow_Closing" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="10, 10, 10, 10" Grid.Column="0">
+
+            <TextBlock Text="Вход в систему" FontSize="36" HorizontalAlignment="Center"/>
+
+            <Label Margin="0, 10, 0, 0" Content="Логин" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="loginTB" FontSize="20" MaxLength="25" PreviewKeyDown="loginTB_PreviewKeyDown"/>
+
+
+            <Label Margin="0, 10, 0, 0" Content="Пароль" FontSize="20" FontWeight="Bold"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Column="0">
+                    <TextBox x:Name="passwordTB" FontSize="20" MaxLength="255" KeyUp="passwordTB_KeyUp" PreviewKeyDown="passwordTB_PreviewKeyDown"/>
+                    <PasswordBox x:Name="hiddenPasswordPB" PasswordChar="*" FontSize="20" FontWeight="Bold" KeyUp="hiddenPasswordPB_KeyUp" PreviewKeyDown="hiddenPasswordPB_PreviewKeyDown"/>
+                </Grid>
+
+
+                <Button Grid.Column="1" x:Name="openPasswordButton" Content="*" FontWeight="Bold" FontSize="20" Foreground="White" Background="#FF498C51" Click="openPasswordButton_Click"/>
+            </Grid>
+
+
+
+            <Label x:Name="labelCaptcha" Margin="0, 10, 0, 0" Content="Капча" FontSize="20" FontWeight="Bold" Visibility="Collapsed"/>
+            <TextBox x:Name="userCaptchaTB" FontSize="20" MaxLength="6" Visibility="Collapsed"/>
+
+            <Grid x:Name="gridCaptcha" Visibility="Collapsed" Margin="0, 10, 0, 0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="Капча:" FontSize="20" FontWeight="Bold"/>
+
+                <Grid Grid.Column="1">
+                    <TextBlock x:Name="captchaText" Grid.Column="1" Text="asdasd" FontSize="20" FontWeight="Bold"/>
+                    <Ellipse Margin="0, 5, 0 , 0" Width="75" Height="3" HorizontalAlignment="Left" Fill="Red"/>
+                </Grid>
+
+                <Button x:Name="regenerateCaptcha" Grid.Column="2" Content="⤱" FontWeight="Bold" FontSize="20" Foreground="White" Background="#FF498C51" Click="regenerateCaptcha_Click"/>
+
+
+            </Grid>
+
+            <Button x:Name="loginButton" Margin="0, 10, 0, 0" Content="Войти" FontSize="20" FontWeight="Bold" Background="#FF498C51" Foreground="White" Height="45" Click="loginButton_Click_1"/>
+
+
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a41ca0864b0a4ba98c3343ea1b704937" Name="Diagram1">
+        <EntityTypeShape EntityType="MewingLabModel.analyzer" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.biomaterials" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.insurance_company" Width="1.5" PointX="1.5" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.insurance_type" Width="1.5" PointX="1.5" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.login_status" Width="1.5" PointX="0.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.orders" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.orders_statuses" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.patients" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.results" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.services" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.services_in_order" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.services_in_user" Width="1.5" PointX="5.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.users" Width="1.5" PointX="0.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.users_history" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MewingLabModel.users_types" Width="1.5" PointX="1.5" PointY="26.5" IsExpanded="true" />
+        <AssociationConnector Association="MewingLabModel.FK_results_analyzer" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_services_analyzer" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_orders_biomaterials" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_patients_insurance_company" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_patients_insurance_type" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_users_history_login_status" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_orders_orders_statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_orders_patients" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_orders_users" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_results_orders" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_services_in_order_orders" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_services_in_order_orders_statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_results_patients" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_results_services" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_services_in_order_services" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_services_in_user_services" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_services_in_user_users" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_users_history_users" ManuallyRouted="false" />
+        <AssociationConnector Association="MewingLabModel.FK_users_users_types" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
